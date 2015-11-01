@@ -1,0 +1,43 @@
+<html>
+<head>
+<title>Number Generator</title>
+<script type="text/javascript">
+function showIt()
+{
+var i=1
+var wbox= document.getElementById('a_wbox');
+if(wbox)
+{
+while (i<=9)
+{
+wbox.value+=(i)
+wbox.value+=(',')
+i++
+}
+wbox.value+=(i)
+}
+}
+function writeIt()
+{
+var tbox = document.getElementById('a_tbox');
+if(tbox)
+{
+for (i = 0; i<=8; i++)
+{
+tbox.value+=((i+1) + ",")
+}
+tbox.value+=(i+1)
+}
+}
+</script>
+</head>
+<body>
+<form name="theForm">
+<input type="text" id="a_wbox" name="a_wbox" value=""/>
+<input type="button" name="btn1" value="Show It" onclick="showIt()"/>
+<br><br>
+<input type="text" id="a_tbox" name="a_tbox" value=""/>
+<input type="button" name="btn" value="Write It" onclick="writeIt()" />
+</form>
+</body>
+</html>
